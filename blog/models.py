@@ -27,7 +27,7 @@ class Post(models.Model):
     ],
     null=True
     )
-    Tag = models.CharField(max_length = 50,blank=True)
+    Tag = models.CharField(max_length = 50,blank=True,null=True)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
