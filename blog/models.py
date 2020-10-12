@@ -17,7 +17,7 @@ class Post(models.Model):
     choices = [("2016","2016年"),("2017","2017年"),("2018","2018年"),
     ("2019","2019年"),("2020","2020年"),
     ],
-    null=False
+    null=True
     )
     text = models.TextField()
     category = models.CharField(
