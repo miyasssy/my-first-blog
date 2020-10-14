@@ -1,12 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Django Girls blog</title>
+      <meta charset="utf-8">
+      <title>Django Girls blog</title>
+      <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
-    <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
 
-        {{ posts }}
-    </body>
+  <body>
+    <div class = "header">
+      <div class="container">
+        <div class="header_left">
+          <h1>My_First_blog</h1>
+        </div>
+        <div class="header_right">
+          <ul>
+            <li><a href="#">containts_1</a></li>
+            <li><a href="#">containts_2</a></li>
+            <li><a href="#">containts_3</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="top_message">
+      <div class = "message_container">
+        <p class="message main_message">main message</p>
+        <p class="message sub_message">sub message</p>
+      </div>
+    </div>
+
+    <div class= "posts">
+      {% for post in posts %}
+      <div class = "post">
+        <h2 class = "post_title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+        <h2 class = "post_category">{{post.category}}</h2>
+      </div>
+      {% endfor %}
+    </div>
+
+    <footer>
+      <div class="">
+      </div>
+    </footer>
+  </body>
 </html>

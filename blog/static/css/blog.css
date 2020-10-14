@@ -1,0 +1,39 @@
+.header{
+  height: 100px;
+  color: red;
+  background-color: #000000;
+}
+
+.header_left{
+  float: left;
+  padding-left: 40px;
+}
+
+.header_right{
+  float:right;
+  padding-right: 40px;
+}
+
+ul{
+  list-style: none;
+}
+
+.top_message{
+  height: 200px;
+  background-color: gray;
+  position:relative;
+}
+
+.message_container{
+  width: 100%;
+  height: 90%;
+  background-color: blue;
+  position:absolute;
+  top:5px;
+}
+
+.message{
+  text-align: center;
+  margin:0;
+  padding-top: 1%;
+}
